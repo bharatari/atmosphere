@@ -1,10 +1,12 @@
-# Casper
+# Atmosphere
 
-The default theme for [Ghost](http://github.com/tryghost/ghost/).
-
-To download, visit the [releases](https://github.com/TryGhost/Casper/releases) page.
+A minimalist blog theme for [Ghost](http://github.com/tryghost/ghost/) built on top of the default Casper theme.
 
 ## Copyright & License
+
+Copyright (c) 2015 Bharat Arimilli
+
+### Casper
 
 Copyright (c) 2013-2015 Ghost Foundation - Released under the MIT License.
 
