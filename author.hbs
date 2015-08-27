@@ -1,0 +1,53 @@
+{{!< default}}
+{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
+
+{{! The big featured header }}
+
+{{! Everything inside the #author tags pulls data from the author }}
+              
+<div class="background-scroller" style="background-image: url({{@blog.cover}})"></div>
+<div class="filter-scroller"></div>
+
+{{#author}}
+<header class="post-header container">
+    <h1 class="post-title">{{name}}</h1>
+</header>
+{{/author}}
+
+
+<main class="content author-container" role="main">
+    <div class="container">
+        {{#author}}
+        <header class="main-header author-head {{#if cover}}" style="background-image: url({{cover}}){{else}}no-cover{{/if}}">
+            <nav class="main-nav overlay clearfix">
+                {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo" /></a>{{/if}}
+            </nav>
+        </header>
+
+        <section class="author-profile inner">
+            {{#if image}}
+            <figure class="author-image">
+                <div class="img" style="background-image: url({{image}})"><span class="hidden">{{name}}'s Picture</span></div>
+            </figure>
+            {{/if}}
+            {{#if bio}}
+            <h2 class="author-bio">{{bio}}</h2>
+            <hr>
+            {{/if}}
+            <div class="author-meta">
+                {{#if location}}<span class="author-location icon-location">{{location}}</span>{{/if}}
+                <br>
+                {{#if website}}<span class="author-link icon-link"><a href="{{website}}">{{website}}</a></span>{{/if}}
+            </div>
+        </section>
+        
+        {{/author}}
+        
+        <div class="author-post-container">
+            {{! The tag below includes the post loop - partials/loop.hbs }}
+            {{> "posts"}}
+        </div>
+            
+
+    </div>
+</main>
