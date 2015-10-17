@@ -97,10 +97,10 @@ body {
 .nav-link a {
     font-family: 'Open Sans';
     color: rgba(255, 255, 255, 0.8);
-    margin-top: 2px;
-    text-transform: lowercase;
-    letter-spacing: -1px;
-    font-size: 20px;
+    margin-top: 4px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 15px;
     font-weight: 400;
     -webkit-transition: background-color 0.5s ease-out, color 0.5s ease-out;
     -moz-transition: background-color 0.5s ease-out, color 0.5s ease-out;
